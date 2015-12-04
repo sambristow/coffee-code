@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #d4d4d4;
+  color: #585858;
+}
+
+header {
+  background-image: url(../images/splash.jpg);
+  padding: 200px 0px 200px 0px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+nav {
+  background-color: #FFDA0D;
+  padding: 20px 0;
+}
+
+a {
+  color: #444444;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #585858;
+}
+
+section {
+  background-color: #ffffff;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 40px, 0, 0, 0;
+}
+h3 {
+  color: #a3a3a3;
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+
+}
+
+p, blockquote {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 20 0 20 0;
+}
+
+footer {
+  background-color: #FFDA0D;
+  padding: 40 0 40 0;
+}
+
+small {
+  display: block;
+  margin: 20px 0 0 0;
+}
+
+.quote {
+  background-color: #FFDA0D;
+}
+/*Styles for JS Burger Menu*/
+.trigger {
+  /*display: none; hides the menu icon on desktop screens*/
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  img, iframe {
+    max-width: 100%;
+  }
+  a {
+    display: block;
+    padding: 10px 0;
+  }
+  header {
+    padding: 50px 0;
+  }
+
+  /*show memu on mobile screens*/
+  .trigger {
+    display: block;
+    /*The position property allows us to change where an element is displayed*/
+    position: absolute;
+    /*When using the position property, we also need to add top, right, bottom, or left to specify exactly where we want to position the element*/
+    top: 20px;
+    right: 20px;
+  }
+  /*Hide Navigation on mobile screens*/
+  nav {
+    display: none;
+  }
+}
