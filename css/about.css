@@ -1,0 +1,36 @@
+/*style and two column layout*/
+
+  .gallery img {
+    /*floated elements attempt to sit next to one another on one line, as far as there is room. At first our images are too big, so we change their width*/
+    float: left;
+    /*Floated elements do not take notice of margins on the left or the right. In order to create our grid layout, we have to do something else. We change the width of our images to be slightly less than 50%, meaning there will be a gap between them*/
+    width: 47%;
+    margin: 20px 0;
+
+  }
+/*To make half of our images float right, we need to references them correctly, using the dot alternate class.*/
+
+.gallery .alternate {
+  float: right;
+}
+/*Clearfix*/
+/*When we have floated elements, we often get broken layouts directly below them. On our site, the small text now appears between our floated columns. This is because anything below a floated element ignores that elements height.*/
+.gallery small {
+  /*The clear properity fixes out broken layout, by clearing the floats. Use clear; both; if you have elements floated left & right.*/
+  clear: both;
+}
+
+@media screen and (max-width: 650px) {
+  /*Turn off all floats*/
+  .gallery img {
+    float: none;
+    /*to make our images stack in one column, we remove the 47% width*/
+    width: 100%;
+  }
+  .gallery .alternate {
+    float: none;
+    
+
+
+  }
+  }
